@@ -6,11 +6,11 @@ class Particle {
   h;
   angle;
   colour;
-  constructor(posX, posY, velAngleRenge, speed, area, minSize = 4) {
+  constructor(posX, posY, velAngleRange, speed, area, minSize = 4) {
     this.pos = createVector(posX, posY);
-    const randomAngle = -90 + random(-0.5 * velAngleRenge, 0.5 * velAngleRenge);
+    const randomAngle = -90 + random(-0.5 * velAngleRange, 0.5 * velAngleRange);
     this.vel = createVector(speed, 0);
-    this.vel.rotate(re);
+    this.vel.rotate(radians(randomAngle));
     this.acc = createVector(0, 0);
     this.w = random(minSize, area);
     this.h = area / this.w;
@@ -19,7 +19,7 @@ class Particle {
     this.colour = palette[paletteIdx];
   }
 
-  applyGravity(x, y) {
+  applyGravity(y) {
     this.acc.add(0, y);
   }
 
