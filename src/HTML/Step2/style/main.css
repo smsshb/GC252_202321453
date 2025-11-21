@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige;
+  margin: 0;
+}
+
+div {
+  background-color: seagreen;
+  padding-inline: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  background-color: yellowgreen;
+}
